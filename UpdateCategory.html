@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Update Category</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+          crossorigin="anonymous">
+    <style>
+        .error-border {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="ListCategory.html">Woofy Wardrobe</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="Dashboard.html">Dashboard</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="AddNewProductbs.html">Add new Product</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        Product List
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="ProductList.html">Female</a></li>
+                        <li><a class="dropdown-item" href="ProductList.html">Male</a></li>
+                        <li><a class="dropdown-item" href="ProductList.html">Unisex</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Sign Out</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container mt-4">
+    <div class="row">
+        <div class="col">
+            <img src="../images/male.jpg" class="rounded mx-auto d-block mb-3" alt="..." width="300"
+                 style="border: 5px solid #C0B9BF;">
+
+            <div class="input-group mb-3">
+                <input type="file" class="form-control" id="inputGroupFile02">
+                <label class="input-group-text" for="inputGroupFile02">Update</label>
+            </div>
+        </div>
+        <div class="col-7">
+            <label for="inputGroup-sizing-default">Category Name:</label>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="inputGroup-sizing-default" value="MALE" name="categoryName">
+            </div>
+        </div>
+    </div>
+    <a class="btn btn-primary" href="#" role="button">Back</a>
+    <input class="btn btn-primary" type="button" value="Submit" onclick="validateForm()">
+    <input class="btn btn-primary" type="reset" value="Reset">
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+<script>
+    function validateForm() {
+        var categoryNameInput = document.getElementById("inputGroup-sizing-default");
+        var categoryNameValue = categoryNameInput.value.trim();
+
+        if (categoryNameValue === "") {
+            categoryNameInput.classList.add("error-border");
+            alert("Please provide category name.");
+        } else {
+            categoryNameInput.classList.remove("error-border");
+        }
+    }
+</script>
+</body>
+</html>

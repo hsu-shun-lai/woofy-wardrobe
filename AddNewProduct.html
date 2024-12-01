@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add New Product</title>
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+  <nav class="menu2">
+    <menu>
+      <li><a href="#">Home</a></li>
+      <li><a href="ProductListing.html">Product List</a></li>
+      <li><a href="AddNewProduct.html">Add New Product</a></li>
+    </menu>
+  </nav><br>
+  <form action="n">
+  <table>
+    <tr>
+      <td>
+        <img src="https://via.placeholder.com/300" alt="Product Photo">
+        <br>
+        <input type="text" placeholder="Enter Image URL" style="width: 90%;">
+      </td>
+      <td style="padding-left: 30px ;">
+        <label>Product Name:</label>
+        <input type="text" style="width: 100%;">
+
+        <label>Description:</label>
+        <textarea rows="4" style="width: 100%;"></textarea>
+
+        <label>Size:</label><br>
+        <input type="checkbox" id="product-size-small">
+        <label for="product-size-small">Small</label>
+        <input type="checkbox" id="product-size-medium">
+        <label for="product-size-medium">Medium</label>
+        <input type="checkbox" id="product-size-large">
+        <label for="product-size-large">Large</label>
+        
+        <br>
+        <label>Category:</label><br>
+        <input type="radio" name="category" id="category-female" value="Female">
+        <label for="category-female">Female</label>
+        <input type="radio" name="category" id="category-male" value="Male">
+        <label for="category-male">Male</label>
+        <input type="radio" name="category" id="category-unisex" value="Unisex">
+        <label for="category-unisex">Unisex</label>
+
+        <br>
+        <label for="product-color">Color:</label>
+        <input type="text" id="product-color" style="width: 100%;">
+
+        <label for="product-accessory">Accessory:</label>
+        <select style="width: 100%;">
+          <option value="None">None</option>
+          <option value="Bowtie">Bowtie</option>
+          <option value="ID Tag">ID Tag</option>
+        </select>
+
+        <label for="product-price">Price (₹):</label>
+        <input type="text" id="product-price" style="width: 100%;">
+
+        <div style="margin-top: 20px;">
+          <button>Back</button>
+          <button type="reset">Reset</button>
+          <button type="submit">Submit</button>
+        </div>
+      </td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Update Product</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" 
+    crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="ListCategory.html">Woofy Wardrobe</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Dashboard.html">Dashboard</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="AddNewProductbs.html">Add new Product</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            Product List
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="ProductList.html">Female</a></li>
+                            <li><a class="dropdown-item" href="ProductList.html">Male</a></li>
+                            <li><a class="dropdown-item" href="ProductList.html">Unisex</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Sign Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col">
+                <img src="../images/dog with lit hoddie.jpg" class="rounded mx-auto d-block mb-3" alt="..."
+                     width="300" style="border: 5px solid #C0B9BF;">
+
+                <div class="input-group mb-3">
+                    <input type="file" class="form-control" id="inputGroupFile02">
+                    <label class="input-group-text" for="inputGroupFile02">Update</label>
+                </div>
+            </div>
+            <div class="col-7">
+                <label for="inputGroup-sizing-default">Product Name:</label>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="inputGroup-sizing-default" value="Warm Wool">
+                </div>
+
+                <label>Description:</label>
+                <div class="input-group mb-3">
+                    <textarea type="text" class="form-control" id="desctiption">Introducing our "Warm Wool" Winter Wear for Dogs – a warm, brown woolen delight that keeps your furry friend snug and stylish all winter long! Embrace the cold with cuteness! 🐾❄️🧶</textarea>
+                </div>
+
+                <label for="flexCheckDefault">Size:</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Small
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Medium
+                    </label>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                    <label class="form-check-label" for="flexCheckChecked">
+                        Large
+                    </label>
+                </div>
+
+                <label for="flexRadioDefault">Category:</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Female
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Male
+                    </label>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Unisex
+                    </label>
+                </div>
+
+                <label for="inputGroup-sizing-default">Colour:</label>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="inputGroup-sizing-default" value="Brown">
+                </div>
+
+                <label for="selectMenu">Accessory:</label>
+                <select class="form-select mb-3" id="selectMenu">
+                    <option selected>select</option>
+                    <option value="1">Bowtie</option>
+                    <option value="2">ID tag</option>
+                    <option value="3">Headband</option>
+                </select>
+
+                <label for="dollar-amount">Enter Price:</label>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">₹</span>
+                    <input type="text" class="form-control" id="dollar-amount" value="900">
+                </div>
+            </div>
+        </div>
+        <a class="btn btn-primary" href="#" role="button">Back</a>
+        <input class="btn btn-primary" type="submit" value="Submit" onclick="return validateForm()">
+        <input class="btn btn-primary" type="reset" value="Reset">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"></script>
+    <script>
+        function validateForm() {
+            var productName = document.getElementById("inputGroup-sizing-default").value.trim();
+            var description = document.getElementById("desctiption").value.trim();
+            var color = document.getElementById("inputGroup-sizing-default").value.trim();
+            var accessory = document.getElementById("selectMenu").value.trim();
+            var price = document.getElementById("dollar-amount").value.trim();
+
+            if (productName === "") {
+                alert("Please enter a Product Name.");
+                return false;
+            }
+
+            if (description === "") {
+                alert("Please enter a Description.");
+                return false;
+            }
+
+            if (color === "") {
+                alert("Please enter a Colour.");
+                return false;
+            }
+
+            if (accessory === "select") {
+                alert("Please select an Accessory.");
+                return false;
+            }
+
+            if (price === "") {
+                alert("Please enter a Price.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>
